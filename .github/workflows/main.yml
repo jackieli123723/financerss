@@ -29,3 +29,16 @@ jobs:
     
       - name: Generate pages
         run: ls -R data/
+        
+      - name: Commit files
+        run: |
+         git config --local user.email "380863274@qq.com"
+         git config --local user.name "jackieli123723"
+         git pull
+         git add data/*
+         git commit -m "update data"
+      - name: Push changes
+        uses:  ad-m/github-push-action@master
+        with:
+         github_token: ${{ secrets.MY_GIT_TOKEN }}
+         branch: main  
