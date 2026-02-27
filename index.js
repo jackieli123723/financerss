@@ -17,7 +17,8 @@ const getTodaysDate = () => {
 };
 
 
-const url = 'http://rss.jrj.com.cn/finance/759.xml'
+// const url = 'http://rss.jrj.com.cn/finance/759.xml'
+const url = 'https://www.chinanews.com.cn/rss/finance.xml'
 spide.fetchRss(url).then(function(data){
         console.log(data); // rss  post list
         // writeJSON('./temp.json', data);
